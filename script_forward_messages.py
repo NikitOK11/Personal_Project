@@ -1,7 +1,7 @@
 from telethon import TelegramClient, events
 import serial
 
-client = TelegramClient('session_name', 29099872, '721b85af6eddc5c90aa5e3bf9f1cd042')
+client = TelegramClient('session_name', 'YOUR_TELEGRAM_USER_API', 'YOUR_TELEGRAM_HASH_API')
 SERIAL_PORT = 'COM5'
 SERIAL_BAUDRATE = 921600
 
@@ -14,5 +14,5 @@ async def my_event_handler(event):
     ser = serial.Serial(port=SERIAL_PORT, baudrate=SERIAL_BAUDRATE, timeout=1)
     ser.write(info_send.encode(encoding='utf-8'))
 
-client.start(password="Nikita110609//")
+client.start(password="YOUR TELEGRAM PASSWORD")
 client.run_until_disconnected()
