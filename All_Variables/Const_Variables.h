@@ -1,10 +1,9 @@
 // WIFI VARIABLES
-const char* ssid = "6";
-const char* password = "Nik110609";
+const char* ssid = "WIFI SSID";
+const char* password = "WIFI PASSOWRD";
 
 
 // TELEGRAM VARIABLES
-const String BOT_TOKEN = "7709520806:AAFrrCArBrA16sL0rmvanVCu7qZKneVblaU";
 const unsigned long BOT_MTBS = 1000;
 
 // SCREEN VARIABLES
