@@ -1,4 +1,4 @@
-# Software for IOT project for personal usage!:wave:
+# Software for IOT project for personal usage! :wave:
 
 This project provides a software for integrating in any IOT thing project! The system consists of two main components:
 
