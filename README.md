@@ -1,1 +1,1 @@
-# Software for IOT project personal use!
+# Software for IOT project for personal usage!
