@@ -1,50 +1,48 @@
-# Software for IOT project for personal usage! :wave:
+# ESP32 OLED Display Project 📱🌐🎶
 
-This project provides a software for integrating in any IOT thing project! The system consists of two main components:
+This project integrates an ESP32 microcontroller with an OLED display to control four different apps: **WiFi**, **Music**, **Telegram**, and **Camera**. The software is controlled via serial commands and works with a Python script for the Telegram integration.
 
-1. **Arduino Firmware (`sketch_feb5a.ino`)**  
-   An Arduino sketch for your ESP (ESP8266/ESP32) board that listens on the serial port for incoming messages. Modify the sketch to handle commands or data as needed—for example, controlling hardware or triggering events on your device.
+## Features 🚀
 
-2. **Python Script (`script_forward_messages.py`)**  
-   A Python script that leverages the Telethon library to monitor your Telegram account for new messages. When a message arrives, the script retrieves the message and the sender’s username, combines them, and sends the information over a serial connection to the ESP device.
+- **WiFi**: Connects to a WiFi network to enable internet features.
+- **Music**: Plays music through a connected audio device.
+- **Telegram**: Displays Telegram messages on the OLED screen by running a Python script locally.
+- **Camera**: Allows for camera control or image display (depending on the app configuration).
 
-## Features
+## Project Components 🧩
 
-- **Real-Time Telegram Integration:** Receive and process Telegram messages instantly.
-- **Serial Communication:** Forward messages over a high-speed serial link (921600 baud by default).
-- **Modular Design:** Separate firmware and Python components allow independent development and testing.
-- **Customizable:** Easily modify the Arduino code or Python script to suit your specific application.
+1. **ESP32**: The microcontroller at the core of this project.
+2. **OLED Display**: A small screen to display the current app and relevant information.
+3. **Python Script**: Manages Telegram functionality and listens for messages to be displayed on the OLED screen.
+4. **Serial Communication**: Commands sent through the serial port to switch between apps.
 
-## Hardware Requirements
+## Setup and Installation 📦
 
-- ESP8266 or ESP32 development board
-- USB cable and necessary connectors for serial communication
-- A computer to run the Python script
+### 1. Requirements
 
-## Software Requirements
+- **Hardware**:
+  - ESP32 Microcontroller
+  - OLED Display (e.g., SSD1306)
+  - Optional: Audio output device for music, camera module for the camera app.
 
-- **For ESP Firmware:**
-  - [Arduino IDE](https://www.arduino.cc/en/software) or [PlatformIO](https://platformio.org/install)
-  
-- **For Python Script:**
+- **Software**:
   - Python 3.x
-  - Python packages as listed in `requirements.txt`
+  - `pyserial` for serial communication between the ESP32 and your computer.
+  - Python libraries for Telegram API (`telethon` or `python-telegram-bot`).
 
-## Setup and Installation
+### 2. Flashing the ESP32
 
-### 1. Arduino Firmware
+To get started, you'll need to flash the ESP32 with the appropriate firmware. Follow these steps:
 
-- **Step 1:** Open the `sketch_feb5a.ino` file in the Arduino IDE or PlatformIO.
-- **Step 2:** Connect your ESP board to your computer.
-- **Step 3:** Select the appropriate board and port.
-- **Step 4:** Compile and upload the sketch to your ESP device.
+1. Connect the ESP32 to your computer via USB.
+2. Flash the firmware using [Arduino IDE](https://www.arduino.cc/en/software) or [PlatformIO](https://platformio.org/). Make sure to install the necessary libraries for OLED display, WiFi, and any other hardware you're using.
 
-> **Note:** This sketch is designed to wait for serial data. Adjust the code as necessary to suit your application needs (e.g., handling specific commands or controlling hardware).
-
-### 2. Python Script
-
-- **Step 1:** Ensure Python 3.x is installed.
-- **Step 2:** (Optional) Create and activate a virtual environment:
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate  # On Windows: venv\Scripts\activate
+#### Libraries:
+- `Adafruit_SSD1306` for the OLED display.
+- `WiFi.h` for WiFi functionality.
+- `WiFiClientSecure.h` for secure internet connections.
+  
+Example:
+```cpp
+#include <WiFi.h>
+#include <Adafruit_SSD1306.h>
