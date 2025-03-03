@@ -1,4 +1,4 @@
-# ESP32 OLED Display Project 📱🌐🎶
+# ESP32 OLED Display Project 📱🌐
 
 This project integrates an ESP32 microcontroller with an OLED display to control four different apps: **WiFi**, **Music**, **Telegram**, and **Camera**. The software is controlled via serial commands and works with a Python script for the Telegram integration.
 
