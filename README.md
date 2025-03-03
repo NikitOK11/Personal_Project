@@ -51,7 +51,7 @@ To get started, you'll need to flash the ESP32 with the appropriate firmware. Fo
 - `All_Variables/Variables.h` for adding necessary changable constan variables
 - `BluetoothA2DPSink.h` for bluetooth connectivity and reading audio tracks metadata
 
-## Usage instructions
+## Usage instructions :newspaper:
 For correct work, follow these steps:
 
 1. Connect the ESP32 via USB to your computer
