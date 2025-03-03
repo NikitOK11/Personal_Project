@@ -28,7 +28,7 @@ This project integrates an ESP32 microcontroller with an OLED display to control
 - **Software**:
   - Python 3.x
   - `pyserial` for serial communication between the ESP32 and your computer.
-  - Python libraries for Telegram API (`telethon` or `python-telegram-bot`).
+  - Python libraries for Telegram API (`telethon`).
 
 ### 2. Flashing the ESP32
 
@@ -39,10 +39,14 @@ To get started, you'll need to flash the ESP32 with the appropriate firmware. Fo
 
 #### Libraries:
 - `Adafruit_SSD1306` for the OLED display.
+- `Adafruit_GFX.h` also for the OLED display
+- `Wire.h` for display pin activation 
 - `WiFi.h` for WiFi functionality.
 - `WiFiClientSecure.h` for secure internet connections.
-  
-Example:
-```cpp
-#include <WiFi.h>
-#include <Adafruit_SSD1306.h>
+- `Fonts/segoeui5pt7b.h` for Segoe UI 5pt font
+- `Fonts/segoeui6pt7b.h` for Segoe UI 6pt font
+- `NTPClient.h` for getting current time
+- `Graphics/icons.h` for integrating icons in the project
+- `All_Variables/Const_Variables.h` for adding necessary constant variables
+- `All_Variables/Variables.h` for adding necessary changable constan variables
+- `BluetoothA2DPSink.h` for bluetooth connectivity and reading audio tracks metadata
