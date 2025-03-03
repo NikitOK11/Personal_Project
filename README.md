@@ -60,6 +60,9 @@ To get started, you'll need to flash the ESP32 with the appropriate firmware. Fo
 Now make sure, that your ESP32 is connected to Wi-Fi. If it is, you will see the main menu of software on your OLED screen.
 Use the following commands to control the software:
 
-1. `Enter` -- enters the current active app
-2. `Back` -- returns to the main menu
-3. `Next` -- if the user is in Music App, this command switches the audio track to the next one. If the user is in Wi-Fi app, then the option for  Wi-Fi net connection in the app is switched. If the user is in Camera App, then the option to take photo/capture video is switched. 
+1. `Enter` - enters the current active app
+2. `Back` - returns to the main menu
+3. `Next` - if the user is in Music App, this command switches the audio track to the next one. If the user is in Wi-Fi app, then the option for  Wi-Fi net connection in the app is switched. If the user is in Camera App, then the option to take photo/capture video is switched. 
+4. `Connect` - if a user is in the Wi-Fi app, then this command makes the device connected to the chosen net. After entering `connect` you have 15 seconds to enter the password.
+
+All the commands should be entered thorugh Serial Monitor on your computer!!! 
